@@ -1,0 +1,26 @@
+server:
+  port: 8091
+  shutdown: graceful
+
+spring:
+  application:
+    name: sentinel-demo
+  cloud:
+    openfeign:
+      httpclient:
+        connection-timeout: 2000
+  #      discovery:
+  #        server-addr: ${nacos.server}
+  #      config:
+  #        server-addr: ${nacos.server}
+  #  config:
+  #    import[0]: nacos:redis-config.yaml?group=DEFAULT_GROUP
+#  lifecycle:
+#    timeout-per-shutdown-phase: 30s
+
+remote:
+  service:
+    url: http://192.168.3.223:8081
+
+#nacos:
+#  server: 192.168.3.223:8848
